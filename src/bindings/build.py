@@ -23,9 +23,9 @@ from cffi import FFI
 __all__ = ["ffi"]
 
 
-HEADERS = glob.glob(
+HEADERS = sorted(glob.glob(
     os.path.join(os.path.abspath(os.path.dirname(__file__)), "*.h")
-)
+))
 
 
 # Build our FFI instance

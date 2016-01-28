@@ -135,7 +135,7 @@ class build_clib(_build_clib):
         files += glob.glob(here("src/libsodium/*/*/*/*/*"))
         files += glob.glob(here("src/libsodium/*/*/*/*/*/*"))
 
-        return files
+        return sorted(files)
 
     def build_libraries(self, libraries):
         raise Exception("build_libraries")
